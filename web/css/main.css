@@ -1,0 +1,356 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../font/FuturaStd-Book.eot');
+    src: url('../font/FuturaStd-Book.eot?#iefix') format('embedded-opentype'),
+         url('../font/FuturaStd-Book.woff') format('woff'),
+         url('../font/FuturaStd-Book.ttf') format('truetype'),
+         url('../font/FuturaStd-Book.svg#Futura') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Futura Bold';
+    src: url('../font/FuturaStd-Bold.eot');
+    src: url('../font/FuturaStd-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/FuturaStd-Bold.woff') format('woff'),
+         url('../font/FuturaStd-Bold.ttf') format('truetype'),
+         url('../font/FuturaStd-Bold.svg#FuturaBold') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'FuturaLight';
+    src: url('../font/FuturaStd-Light.eot');
+    src: url('../font/FuturaStd-Light.eot?#iefix') format('embedded-opentype'),
+         url('../font/FuturaStd-Light.woff') format('woff'),
+         url('../font/FuturaStd-Light.ttf') format('truetype'),
+         url('../font/FuturaStd-Light.svg#FuturaLight') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/*  ========================
+    My Styles
+    ======================== */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(/boxsizing.htc);
+    position: relative;
+}
+body {
+    font: 81.25%/1.4 Arial,sans-serif;
+    color: #555;
+}
+h1 {
+    font-family: 'Futura Bold', sans-serif;
+    margin-bottom: 15px;
+    padding-top: 8px;
+    font-size: 2.15em;
+    border-top: 8px solid #e8e8e8;
+    text-transform: capitalize;
+}
+h2 {
+    margin-bottom: 16px;
+    font-family: 'Futura Bold', sans-serif;
+    font-size: 1.6923em;
+}
+h4 {
+    margin-bottom: 16px;
+    font-size: 1.0769em;
+    font-weight: 700;
+}
+p {
+    margin-bottom: 16px;
+}
+section {
+    margin-bottom: 15px;
+}
+a {
+    color: #25afeb;
+    text-decoration: none;
+}
+a:visited {
+    color: #2097cb;
+}
+a:hover {
+    color: #028ecb;
+}
+a:active {
+    color: #25afeb;
+}
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Layout */
+header,
+.content,
+footer {
+    width: 95%;
+    margin: auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+}
+.logo {
+    margin: 15px auto;
+    display: block;
+    width: 164px;
+    height: 92px;
+    background: url('../images/logo@2x.png') no-repeat;
+    background-size: 164px 92px;
+    text-indent: -9999px;
+}
+.main-menu {
+    margin-bottom: 15px;
+}
+.main-menu li {
+    display: inline;
+    margin-left: 20px;
+}
+.main-menu li:first-child {
+    margin-left: 0;
+}
+.search-form input,
+.search-form button {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.search-form input {
+    width: 85%;
+    padding: 7px;
+    -webkit-box-shadow: inset 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+}
+.search-form button {
+    background: #fefefe; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fefefe 0%, #dbdbdb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#dbdbdb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fefefe 0%,#dbdbdb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fefefe 0%,#dbdbdb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fefefe 0%,#dbdbdb 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fefefe 0%,#dbdbdb 100%); /* W3C */
+    -webkit-box-shadow:  1px 1px 10px 1px rgba(0, 0, 0, 0.25);
+    box-shadow:  1px 1px 10px 1px rgba(0, 0, 0, 0.25);
+    width: 50px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+}
+.search-form button:hover {
+    background: #dbdbdb; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fefefe 0%, #ededed 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fefefe 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fefefe 0%,#ededed 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fefefe 0%,#ededed 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fefefe 0%,#ededed 100%); /* W3C */
+}
+.slideshow {
+    margin: 20px 0;
+}
+.slideshow figcaption {
+    text-align: center;
+}
+.underline {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.sprite {
+    width: 274px;
+    height: 77px;
+    text-indent: -999em;
+    overflow: hidden;
+    background: url('../images/index.jpg') no-repeat;
+}
+.privacy {
+    background-position: -274px 0px;
+}
+.photogenica-on-the-go {
+    background-position: -548px 0px;
+}
+.explore ul {
+    overflow: hidden;
+}
+.explore ul li {
+    float: left;
+    margin-right: 5px;
+}
+
+/* Footer */
+footer {
+    clear: both;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-menu {
+    margin-bottom: 15px;
+}
+.footer-menu li {
+    display: inline;
+    margin-left: 2px;
+    padding-left: 4px;
+    border-left: 1px solid #e8e8e8;
+}
+.footer-menu li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+}
+
+@media screen and (min-width:50.769230769em) {
+    header,
+    .slideshow,
+    .content,
+    footer {
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        height: 122px;
+    }
+    .logo {
+        float: left;
+    }
+    .main-menu {
+        position: absolute;
+        right: 280px;
+        top: 90px;
+    }
+    .search-form {
+        float: right;
+        clear: none;
+        position: absolute;
+        top: 85px;
+        right: 0;
+    }
+    .search-form input {
+        width: 190px;
+    }
+    .search-form button {
+        width: auto;
+    }
+    .slideshow {
+        width: 95%;
+    }
+    .slideshow figcaption {
+        text-align: right;
+    }
+    section {
+        float: left;
+        width: 31.5%;
+        margin-right: 2.5%;
+        padding-right: 2.5%;
+        border-right: 1px solid #e8e8e8;
+    }
+    .sprite {
+        width: 100%;
+    }
+    .content section:nth-of-type(n+3) {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+    }
+    .underline {
+        overflow: hidden;
+    }
+    .explore {
+        width: 100%;
+    }
+    .explore div {
+        float: left;
+        width: 31.5%;
+    }
+    .explore ul {
+        float: right;
+        width: 66%;
+    }
+    footer {
+        padding-top: 10px;
+        border-top: 1px solid #e8e8e8;
+    }
+    .footer-menu {
+        float: left;
+    }
+    footer small {
+        width: 10/11*2
+        float: right;
+    }
+}
+
